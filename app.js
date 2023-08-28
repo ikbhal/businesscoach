@@ -10,6 +10,9 @@ const port = process.env.PORT || 3065;
 // express static public 
 app.use(express.static(path.join(__dirname, 'public')));
 
+// connect ejs views 
+app.set('views', path.join(__dirname, 'views'));
+
 // Middleware
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));

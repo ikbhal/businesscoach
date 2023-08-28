@@ -38,6 +38,18 @@ class VideosDatabase {
       callback(err);
     });
   }
+
+  getVideoById(id) {
+    return new Promise((resolve, reject) => {
+      db.get('SELECT * FROM videos WHERE id = ?', [id], (error, video) => {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(video);
+        }
+      });
+    });
+  }
 }
 
 module.exports = VideosDatabase;

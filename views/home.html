@@ -1,10 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dashboard</title>
+  <title>Home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-  <h1>Welcome to the Dashboard</h1>
-  <!-- Additional content for the dashboard -->
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h2 class="mb-4">Welcome to Business Coach</h2>
+        <p>Hello, <span id="user-name"></span>!</p>
+        <h4 class="mt-4">Video List</h4>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Watch</th>
+            </tr>
+          </thead>
+          <tbody id="video-list"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      const token = localStorage.getItem('token');
+      const username = localStorage.getItem('username'); // Get the username
+
+      if (!token) {
+        window.location.href = '/login.html';
+      }
+
+      $('#user-name').text(username); // Display the username
+
+      // Fetch and display the list of videos
+      $.ajax({
+        type: 'GET',
+        url: '/videos',
+        headers: {
+          'Authorization': `Bearer ${token}`
+        },
+        success: function (videos) {
+          const tbody = $('#video-list');
+          videos.forEach(video => {
+            const row = `
+              <tr>
+                <td>${video.title}</td>
+                <td><a href="/watch-page?id=${video.id}">Watch</a></td>
+              </tr>
+            `;
+            tbody.append(row);
+          });
+        },
+        error: function (xhr) {
+          console.error('Error fetching videos:', xhr);
+        }
+      });
+    });
+  </script>
 </body>
 </html>

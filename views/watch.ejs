@@ -1,0 +1,61 @@
+<!-- views/watch.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Watch Video</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h2 class="mb-4">Watch Video</h2>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="<%= video.url %>" allowfullscreen></iframe>
+        </div>
+        <h4 class="mt-4">Notes</h4>
+        <textarea class="form-control" rows="5" id="notes"></textarea>
+        <button class="btn btn-primary mt-3" id="save-notes">Save Notes</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      const token = localStorage.getItem('token');
+      const videoId = '<%= video.id %>';
+      
+      // Load existing notes if any
+      // Fetch notes from the server if required
+      // Display notes in the textarea
+
+      $('#save-notes').click(function () {
+        const notes = $('#notes').val();
+        // Send notes to the server to save
+        
+        // Example AJAX request to save notes
+        // $.ajax({
+        //   type: 'POST',
+        //   url: '/notes',
+        //   headers: {
+        //     'Authorization': `Bearer ${token}`
+        //   },
+        //   data: {
+        //     videoId,
+        //     notes
+        //   },
+        //   success: function (response) {
+        //     console.log('Notes saved:', response);
+        //   },
+        //   error: function (xhr) {
+        //     console.error('Error saving notes:', xhr);
+        //   }
+        // });
+      });
+    });
+  </script>
+</body>
+</html>
