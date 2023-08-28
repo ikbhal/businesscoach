@@ -1,0 +1,220 @@
+Bismillah
+
+lets create 
+businesscoach.rontohub.com 
+port 3065  
+technologies : jquery, node.js express sqlite3
+list videos of business coach 
+to start with rahul jain business coach 
+we will show his channel short video for now 
+
+as admin page will allow to addd youutube shorts 
+
+server app.js , public , index.html -> script.js styles.csss 
+
+---
+customer pages will watch video 
+---
+watch 3 times feature 
+mark how many timies he watched 
+counter , or check box 
+prefer checkbox , 
+---
+
+data points 
+
+create Table for videos (id primary key auto incrmente, url, tittle);
+caret table user (id autoincrementa, name, password, email )
+create table user_videos(id, user_id, video_id, watched_starttime)
+cretate table user_video_notes (id, user_id, video_id, notes);
+
+createtables.js -> create all tables 
+
+---
+user default usename iqbal, password 123
+---
+login formm ->  usernamee, password, check in db, create login api 
+if success ,allow to login go to home.html , else direct back to login.html 
+index.html -> have share about business coach, login page link 
+---
+home.html -> storeg logged in user in local storage
+send for each further reuqest ed when need 
+logout -> remov from local storage username 
+---
+home.html -> have video list, search page 
+for each vidoe tap -> open only that video 
+counter show -> how many timie it played 
+when we start watching -> add entry to user_video 
+---
+allow user taking notes in video -> via user_video_notes tbla entry row 
+
+
+---
+
+---
+video table  content initial 
+
+each line have title, url below 
+opuluate
+
+1)
+Why a business owner needs an executive assistant?
+https://www.youtube.com/watch?v=3QPfAVe3qpU
+
+
+2)
+Why successful people wake up early?
+https://www.youtube.com/watch?v=oYQGJTwDWzc
+
+
+3)
+Why is system crashing good?
+https://youtu.be/V832_TgYq4c
+
+4)
+Be Money-minded #businesscoach
+
+https://www.youtube.com/watch?v=zUJLGjbnL2M
+
+
+5)
+
+Business Not Growing?
+https://youtu.be/KC1KguuP3d4
+
+
+6)
+Sales team should not generate lead
+
+https://www.youtube.com/watch?v=rB-3zSUTVHc
+
+
+7)
+Business growth Commitment
+
+https://www.youtube.com/watch?v=6jf9fUFpA_8
+
+
+8)
+
+
+Invest in self learning
+
+https://youtu.be/MXqjmSKBKlE
+
+9)
+
+The "JOY" of doing business!
+
+https://www.youtube.com/watch?v=LtRkSb6jpZw
+
+
+
+10)
+
+
+Listen & don't give solutions
+
+https://youtu.be/pC_3oclK62o
+
+
+---
+
+11)
+Profit or Turnover - What Should You Track?
+https://youtu.be/wgrrBZT1zCs
+
+
+
+12)
+
+Share your profits with your team
+https://youtu.be/slU8_-Cp-vU
+
+
+
+13)
+Do you have a system in place to hold you accountable?
+
+https://www.youtube.com/watch?v=YlFnzFucFc0
+
+
+14)
+
+Stop giving tasks verbally
+https://www.youtube.com/watch?v=HMiq8mGwi_s
+
+
+15)
+
+Perform or Perish
+https://youtu.be/FNA58PBr9BU
+
+16)
+Align your team first
+
+https://www.youtube.com/watch?v=rz85UMsAS6U
+
+17)
+
+What should we track when we hear the word Sales??
+https://youtu.be/O_cemB3liQU
+
+
+18)
+
+Start your work at 8AM sharp
+
+https://youtu.be/JLOONNs4Rxs
+
+19)
+
+The Cheapest Investment!
+https://www.youtube.com/watch?v=y8dpw6O0J1M
+
+
+20)
+Wife Management System
+
+
+https://www.youtube.com/watch?v=WVj5jNVSGak
+
+
+21)
+
+Shift Complaints into celebrations
+
+https://youtu.be/4k3ixADfkKs
+
+22)
+
+Sales is a Number Game!! Is It??
+
+
+https://youtu.be/nImhbNXyU_w
+
+23)
+Growing your business starts with the art of delegation
+https://youtu.be/3jtA2bDm828
+https://www.youtube.com/watch?v=3jtA2bDm828
+
+24)
+Things are not getting done in business
+
+https://www.youtube.com/watch?v=POTs6UwBogk
+
+25)
+How much time do you invest in the growth of your business
+
+https://www.youtube.com/watch?v=U1tjwAxe4OY
+
+26)
+
+Are you comitting this SIN??
+https://youtu.be/nA_In7dGV-8
+
+
+
+
+
+https://www.youtube.com/watch?v=HMiq8mGwi_s
